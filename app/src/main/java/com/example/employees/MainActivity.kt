@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity(),EmployeeAdapter.onItemClickListener {
     }
 
     override fun onItemCLick(position: Int) {
-        Toast.makeText(this,"item $position clicked",Toast.LENGTH_SHORT).show()
         val intent = Intent(this, EmployeeDetailActivity::class.java)
         intent.putExtra("image",employeeList[position].imageResource)
         intent.putExtra("name",employeeList[position].name)
